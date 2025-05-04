@@ -6,7 +6,7 @@ The bot enters a delta-neutral position by simultaneously:
 - Buying an asset on the spot market
 - Shorting the same asset on the perpetual futures market with the same position size
 
-This strategy is profitable when the funding rate is negative—meaning short sellers are paid a periodic fee by long traders. Since price exposure is neutralized, the bot earns low-risk returns from funding payments alone, regardless of market direction.
+This strategy is profitable when the funding rate is positive—meaning short sellers are paid a periodic fee by long traders. Since price exposure is neutralized, the bot earns low-risk returns from funding payments alone, regardless of market direction.
 
 The bot continuously monitors funding rates across supported exchanges (currently Bybit) and logs opportunities to the terminal when predefined conditions are met.
 
