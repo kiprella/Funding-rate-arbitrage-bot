@@ -10,7 +10,6 @@ class BybitExchange(ExchangeInterface):
         self.session = None
 
     async def connect(self) -> bool:
-        """Establish connection to Bybit exchange"""
         try:
             self.session = aiohttp.ClientSession()
             return True
@@ -19,12 +18,6 @@ class BybitExchange(ExchangeInterface):
             return False
 
     async def get_perpetual_tickers(self) -> List[str]:
-        """
-        Get all available perpetual trading pairs from Bybit
-        
-        Returns:
-            List[str]: List of perpetual trading pair symbols
-        """
         if not self.session:
             raise ConnectionError("Not connected to Bybit. Call connect() first.")
 
@@ -38,7 +31,7 @@ class BybitExchange(ExchangeInterface):
                 if response.status == 200:
                     data = await response.json()
                     if data['retCode'] == 0:
-                        # Extract symbols from the response
+         
                         symbols = [item['symbol'] for item in data['result']['list']]
                         return symbols
                     else:
@@ -49,15 +42,11 @@ class BybitExchange(ExchangeInterface):
             raise Exception(f"Error fetching tickers: {str(e)}")
 
     async def get_funding_rate(self, symbol: str) -> Dict[str, Any]:
-        """
-        Get funding rate for a specific symbol from Bybit
         
         Args:
             symbol (str): Trading pair symbol (e.g., 'BTCUSDT')
             
         Returns:
-            Dict[str, Any]: Funding rate information
-        """
         if not self.session:
             raise ConnectionError("Not connected to Bybit. Call connect() first.")
 
@@ -78,7 +67,6 @@ class BybitExchange(ExchangeInterface):
             raise Exception(f"Error fetching funding rate: {str(e)}")
 
     async def disconnect(self) -> None:
-        """Close connection to Bybit exchange"""
         if self.session:
             await self.session.close()
             self.session = None 
