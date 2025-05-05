@@ -13,7 +13,7 @@ The bot continuously monitors funding rates across supported exchanges (currentl
 ## How to Run
 
 1. Clone the repository:
-   git clone https://github.com/kiprella/Kairos_Arbitrage_Bot
+   git clone (https://github.com/kiprella/Funding-rate-arbitrage-bot.git)
 
 2. Create a `.env` file in the root folder and add your API keys:
    BYBIT_API_KEY=your_key
