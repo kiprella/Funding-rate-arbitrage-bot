@@ -23,8 +23,7 @@ The bot continuously monitors funding rates across supported exchanges (currentl
    pip install -r requirements.txt
 
 4. Fetch available perpetual tickers:
-   cd tickers_info
-   python fetch_tickers.py
+   python -m src.tickers_info.fetch_tickers from root folder
 
 5. Run the funding data script from the root folder:
    python x_funding_data.py

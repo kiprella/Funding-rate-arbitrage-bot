@@ -1,7 +1,7 @@
 import asyncio
 from typing import Optional
-from ..exchanges.bybit import BybitExchange
-from ..config.settings import Config
+from src.exchanges.bybit import BybitExchange
+from src.config.settings import Config
 
 class TradingEngine:
     def __init__(self):

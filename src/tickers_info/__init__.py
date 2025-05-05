@@ -1,0 +1,3 @@
+"""
+Tickers info package
+""" 

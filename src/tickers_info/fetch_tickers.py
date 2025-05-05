@@ -2,7 +2,7 @@ import asyncio
 import csv
 import os
 from datetime import datetime
-from src.engine.trading_engine import TradingEngine
+from ..engine.trading_engine import TradingEngine
 from tabulate import tabulate
 
 async def save_tickers_to_csv(tickers: list, exchange: str):
