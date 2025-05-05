@@ -20,7 +20,7 @@ The bot continuously monitors funding rates across supported exchanges (currentl
    BYBIT_API_SECRET=your_secret
 
 3. Install dependencies:
-   pip install -r requirements.txt
+   pip install -e .
 
 4. Fetch available perpetual tickers:
    python -m src.tickers_info.fetch_tickers from root folder
