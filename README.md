@@ -26,7 +26,7 @@ The bot continuously monitors funding rates across supported exchanges (currentl
    python -m src.tickers_info.fetch_tickers from root folder
 
 5. Run the funding data script from the root folder:
-   python x_funding_data.py
+   python data_fetcher/bybit_funding_data.py
 
 6. Start monitoring for opportunities:
    python funding_opportunity_monitor.py
