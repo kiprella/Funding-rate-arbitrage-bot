@@ -20,13 +20,13 @@ The bot continuously monitors funding rates across supported exchanges (currentl
    BYBIT_API_SECRET=your_secret
 
 3. Install dependencies:
-   pip install -r requirements.txt
+   pip install -e .
 
 4. Fetch available perpetual tickers:
    python -m src.tickers_info.fetch_tickers from root folder
 
 5. Run the funding data script from the root folder:
-   python x_funding_data.py
+   python data_fetcher/bybit_funding_data.py
 
 6. Start monitoring for opportunities:
    python funding_opportunity_monitor.py
